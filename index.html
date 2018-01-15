@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>The page is SLOWLY</title>
+		<meta name="description" content="block" />
+		<meta name="keywords" content="block"/>
+		<meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+		<link rel="stylesheet" href="css/amazeui.min.css" />
+
+		<script type="text/javascript" src="js/jquery.min.js" ></script>
+		
+		<script type="text/javascript" src="js/amazeui.min.js" ></script>
+		<link rel="stylesheet" href="css/style.css" />
+		<link href="https://fonts.googleapis.com/css?family=Rajdhani:400,500,600,700" rel="stylesheet">
+
+	</head>
+	<body >
+		<div data-am-widget="slider" class="am-slider am-slider-default" data-am-slider='{}' >
+			  <ul class="am-slides">
+                  <li><img src="images/banner.jpg"> </li>
+			  </ul> 
+		</div>
+		</ul>
+		<div data-am-widget="titlebar" class="am-titlebar am-titlebar-default title">
+		    <h2 class="am-titlebar-title "  style="font-size: 2.2rem; color: #000;font-weight:bold;">   CHOOSE YOUR CONTENTS </h2>
+
+		</div>
+	    <ul data-am-widget="gallery" class="am-gallery am-avg-sm-2 am-avg-md-3 am-avg-lg-4 am-gallery-default product" >
+		      <li>
+		        <div class="am-gallery-item">
+		             <a href="javascript:void(0)" class="content">
+		              <img src="images/p.png"  alt=""/>
+		              <h3  style="font-size: 1.6rem; font-weight:700; color: #000; " >  &nbsp; &nbsp;  -> E-MAIL <- </h3>
+
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		             <a href="javascript:void(0)" class="content">
+		              <img src="images/p1.png"  alt=""/>
+		                <h3  style="font-size: 1.6rem; font-weight:700; color: #00; " >   &nbsp; &nbsp;  -> MUSIC <- </h3>
+
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item" >
+		             <a href="javascript:void(0)" class="content">
+		              <img src="images/p2.png"  alt=""/>
+		              <h3  style="font-size: 1.6rem; font-weight:700; color: #000; " >   &nbsp;  &nbsp; -> VIDEO <- </h3>
+		            </a>
+		        </div>
+		      </li>
+		      <li>
+		        <div class="am-gallery-item">
+		             <a href="javascript:void(0)" class="content" >
+		              <img src="images/p3.png"  alt=""/>
+		                <h3  style="font-size: 1.6rem; font-weight:700; color: #000; " >  &nbsp;  &nbsp; -> SOCIAL <- </h3>
+
+		            </a>
+		        </div>
+		      </li>
+
+		 </ul>
+
+        <div id="alert">
+        <img src="images/block.gif"  alt=""/>
+        <p>The page is still loading because the Content Provider  does not pay enough money to your ISP to make the content upload faster</p>
+        <p> </p>
+         <p> </p>
+        <input id = "close" type="reset" value="CLOSE" class="sub" />
+        </div>
+        <script type="text/javascript">
+            var myAlert = document.getElementById("alert");
+            var reg = document.getElementsByClassName("content");
+            var mClose = document.getElementById("close");
+            for(var i=0;i<reg.length;i++ ){
+            reg[i].onclick = function() {
+                myAlert.style.display = "block";
+                myAlert.style.position = "absolute";
+                myAlert.style.top = "40%";
+                myAlert.style.left = "50%";
+                myAlert.style.marginTop = "-20%";
+                myAlert.style.marginLeft = "-40%";
+                mybg = document.createElement("div");
+                mybg.setAttribute("id","mybg");
+                mybg.style.background = "#000";
+                mybg.style.width = "100%";
+                mybg.style.height = "200%";
+                mybg.style.position = "absolute";
+                mybg.style.top = "0";
+                mybg.style.left = "0";
+                mybg.style.zIndex = "500";
+                mybg.style.opacity = "0.5";
+                mybg.style.filter = "Alpha(opacity=30)";
+                document.body.appendChild(mybg);
+                document.body.style.overflow = "hidden";
+            }
+            }
+            
+
+            mClose.onclick = function()
+            {
+                myAlert.style.display = "none";
+                mybg.style.display = "none";
+            }
+            </script>
+	</body>
+</html>
